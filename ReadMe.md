@@ -1,4 +1,4 @@
-# ⚙️ Code Obfuscator ⚙️
+# ⚙️Code Obfuscator⚙️
 
 # 6 Languages
 <p>• PHP</p>
