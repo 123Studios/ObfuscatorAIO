@@ -80,7 +80,6 @@ namespace ObfuscatorAIO
                             // c# variable has for loop scope only
                             String regString = method.Body.Instructions[i].Operand.ToString();
                             String encString = Convert.ToBase64String(UTF8Encoding.UTF8.GetBytes(regString));
-                            Console.WriteLine($"{regString} -> {encString}");
                             // methodology for adding code: write it in plain c#, compile, then view IL in dnspy
                             method.Body.Instructions[i].OpCode = OpCodes.Nop; // errors occur if instruction not replaced with Nop
                             method.Body.Instructions.Insert(i + 1, new Instruction(OpCodes.Call, md.Import(typeof(System.Text.Encoding).GetMethod("get_UTF8", new Type[] { })))); // Load string onto stack
