@@ -7,3 +7,6 @@
 <p>• C# ❌</p>
 <p>• URL Obfuscation ✅</p>
 <p>• JavaScript ❌</p>
+
+# C-Sharp
+<p>C# currently unsecure and bad do not use other are not secure</p>
