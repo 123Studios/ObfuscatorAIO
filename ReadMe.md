@@ -9,4 +9,4 @@
 <p>• JavaScript ❌</p>
 
 # C-Sharp
-<p>C# currently unsecure and bad do not use other are not secure</p>
+<p>C# currently unsecure and bad do not use other are not secure. Add more protection soon.</p>
