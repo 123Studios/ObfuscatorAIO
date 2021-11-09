@@ -9,4 +9,4 @@
 <p>• JavaScript ❌</p>
 
 # C-Sharp
-<p>Bad protection for C# need to make better. Add more protection soon.</p>
+<p>Bad protection for C# need to make better. Add more protection soon. Work on Anti Debug.</p>
