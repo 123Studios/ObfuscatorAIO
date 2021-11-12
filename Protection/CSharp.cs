@@ -73,12 +73,11 @@ namespace ObfuscatorAIO
         }
         public static void Watermark(ModuleDefMD module)
         {
-            foreach (TypeDef type in module.Types)
-            {
-                module.Name = "ObfuscatorAIO - https://github.com/123Studios";
-            }
+            
+            module.Name = "ObfuscatorAIO - https://github.com/123Studios";
         }
-                public static void obfuscate_strings(ModuleDef md) //From Net-Obfuscate - BinaryScary
+            
+        public static void obfuscate_strings(ModuleDef md) //From Net-Obfuscate - BinaryScary
         {
 
             foreach (var type in md.GetTypes())
