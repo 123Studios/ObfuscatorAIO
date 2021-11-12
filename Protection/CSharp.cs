@@ -20,7 +20,12 @@ namespace ObfuscatorAIO
             return new string(Enumerable.Repeat(chars, length)
             .Select(s => s[random.Next(s.Length)]).ToArray());
         }
-
+        public static String ForiegnText(int length)
+        {
+            const string chars = "诶比西迪伊艾弗吉艾尺艾杰开艾勒艾马艾娜哦屁吉吾艾儿艾";
+            return new string(Enumerable.Repeat(chars, length)
+            .Select(s => s[random.Next(s.Length)]).ToArray());
+        }
 
         public static void Start()
         {
@@ -35,9 +40,12 @@ namespace ObfuscatorAIO
             ModuleDefMD moduleDefMD = ModuleDefMD.Load(array);
 
             Console.WriteLine("[+] Read Executable Successfully");
+            Watermark(moduleDefMD);
             AddStringMethod(moduleDefMD);
             obfuscate_strings(moduleDefMD);
             MethodRename(moduleDefMD);
+            namespaceRenamer(moduleDefMD);
+
             moduleDefMD.Write(assemblyDef.Name + "-obfuscated.exe");
             Console.WriteLine("[+] Obfuscated Successfully!\nPress Any Key To Continue...");
             Console.ReadKey();
@@ -45,15 +53,7 @@ namespace ObfuscatorAIO
             Program.Start();
 
         }
-        public static MethodDef Clonesignature(MethodDef from, MethodDef to)
-        {
-            to.Attributes = from.Attributes;
 
-            if (from.IsHideBySig)
-                to.IsHideBySig = true;
-
-            return to;
-        }
         public static void MethodRename(ModuleDefMD moduleDef)
         {
             foreach (TypeDef typeDef in moduleDef.GetTypes())
@@ -71,7 +71,14 @@ namespace ObfuscatorAIO
                 }
             }
         }
-        public static void obfuscate_strings(ModuleDef md) //Taken From Net-Obfuscate Created By BinaryScary
+        public static void Watermark(ModuleDefMD module)
+        {
+            foreach (TypeDef type in module.Types)
+            {
+                module.Name = "ObfuscatorAIO - https://github.com/123Studios";
+            }
+        }
+                public static void obfuscate_strings(ModuleDef md) //From Net-Obfuscate - BinaryScary
         {
 
             foreach (var type in md.GetTypes())
@@ -99,7 +106,15 @@ namespace ObfuscatorAIO
                 }
             }
         }
-        public static void AddStringMethod(ModuleDefMD module)
+        public static void namespaceRenamer(ModuleDefMD moduleDef)
+        {
+            foreach (TypeDef typeDef in moduleDef.GetTypes())
+            {
+                typeDef.Namespace = JunkData(90000);
+            }
+        }
+
+            public static void AddStringMethod(ModuleDefMD module)
         {
             foreach (TypeDef typeDef in module.Types)
             {
