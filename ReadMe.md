@@ -8,5 +8,8 @@
 <p>• URL Obfuscation ✅</p>
 <p>• Lua ❌</p>
 
+# Lua
+<p>Bytecode Obfuscatuion Testing In Progress</p>
+
 # C-Sharp
 <p>Bad protection for C# need to make better. Add more protection soon. Work on Anti Debug.</p>
