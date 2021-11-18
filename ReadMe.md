@@ -6,7 +6,7 @@
 <p>• Python ❌</p>
 <p>• C# ✅</p>
 <p>• URL Obfuscation ✅</p>
-<p>• Lua ❌</p>
+<p>• Lua 🛠</p>
 
 # Lua
 <p>Bytecode Obfuscatuion Testing In Progress</p>
