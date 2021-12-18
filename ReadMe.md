@@ -7,9 +7,27 @@
 <p>• C# ✅</p>
 <p>• URL Obfuscation ✅</p>
 <p>• Lua 🛠</p>
+# PHP
+<p>-Base64 encoding</p>
 
-# Lua
-<p>Bytecode obfuscation in progress.</p>
+# Batch
+<p>-Junk Variables</p>
+
+# Python (In progress)
 
 # C-Sharp
-<p>Bad protection for C# need to make better. Add more protection soon. Work on Anti Debug.</p>
+<p>-String protection</p>
+<p>-Junk classes</p>
+<p>-Method renaming</p>
+<p>-Namespace renamer</p>
+<p>-Junk strings</p>
+<p>-Watermarker</p>
+
+# URL
+<p>IP hex encoding</p1>
+
+# Lua (soon)
+<p>-Bytecode obfuscation in progress.</p>
+
+
+
