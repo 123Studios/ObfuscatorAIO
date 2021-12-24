@@ -45,6 +45,7 @@ namespace ObfuscatorAIO
             obfuscate_strings(moduleDefMD);
             MethodRename(moduleDefMD);
             namespaceRenamer(moduleDefMD);
+            FieldRename(moduleDefMD);
 
             moduleDefMD.Write(assemblyDef.Name + "-obfuscated.exe");
             Console.WriteLine("[+] Obfuscated Successfully!\nPress Any Key To Continue...");
@@ -53,7 +54,16 @@ namespace ObfuscatorAIO
             Program.Start();
 
         }
-
+        public static void FieldRename(ModuleDefMD moduleDef)
+        {
+            foreach (var types in moduleDef.Types)
+            {
+                foreach (var field in types.Fields)
+                {
+                    field.Name = ForiegnText(field.Name.Length + 20);
+                }
+            }
+        }
         public static void MethodRename(ModuleDefMD moduleDef)
         {
             foreach (TypeDef typeDef in moduleDef.GetTypes())
