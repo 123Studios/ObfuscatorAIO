@@ -1,5 +1,5 @@
-# ⚙️ObfuscatorAIO⚙️
-
+# ⚙️ObfuscatorAIO⚙️ (Archive)
+# Archived cause lack of interest to work on. Might continue in future stay tune.
 # 6 Languages
 <p>• PHP ✅</p>
 <p>• Batch/MS-DOS Scripting ✅</p>
